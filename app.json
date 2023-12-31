@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "61cc3ffa-a8ce-4713-bfee-a6405409b32e"
+      }
+    },
+    "owner": "otis0620"
   }
 }
