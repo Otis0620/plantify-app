@@ -27,8 +27,23 @@ jobs:
             npm test
             npm run lint
 
+  eas-preview-build:
+    executor: default
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Trigger build
+          command: npx eas-cli build --platform all --non-interactive --no-wait
+
 workflows:
   version: 2
-  build-workflow:
+  code-quality:
     jobs:
       - code-quality
+
+  build-app:
+    jobs:
+      - eas-preview-build

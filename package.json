@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "prepare": "husky install",
     "test": "jest",
-    "build-ios": "eas build --profile development-simulator --platform ios",
+    "build-ios": "eas build --profile development-simulator --platform ios --non-interactive",
     "build-android": "eas build --profile development --platform android",
     "build-all": "npm run build-ios && npm run build-android"
   },
