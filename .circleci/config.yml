@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  code-quality:
     docker:
       - image: circleci/node:lts
 
@@ -31,7 +31,4 @@ workflows:
   version: 2
   build-workflow:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: main
+      - code-quality
