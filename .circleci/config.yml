@@ -27,40 +27,11 @@ jobs:
             npm test
             npm run lint
 
-  deploy:
-    docker:
-      - image: circleci/node:14
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-            - v1-dependencies-
-
-      - run:
-          name: Install dependencies
-          command: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
-
-      - run:
-          name: Run tests and linting
-          command: |
-            npm test
-            npm run lint
-   
-
 workflows:
   version: 2
   build-workflow:
     jobs:
-      - build
-      - deploy:
+      - build:
           filters:
             branches:
               only: main
