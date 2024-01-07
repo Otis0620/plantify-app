@@ -4,6 +4,7 @@ executors:
   default:
     docker:
       - image: cimg/node:lts
+
     working_directory: ~/plantify-app
 
 jobs:
@@ -38,13 +39,24 @@ jobs:
 
     steps:
       - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+
       - run:
           name: Install dependencies
           command: npm ci
 
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+
       - run:
           name: Trigger build
-          command: npx eas-cli build --platform all --non-interactive --no-wait
+          command: npx eas-cli build --profile preview --platform all --non-interactive --no-wait
 
 workflows:
   version: 2
