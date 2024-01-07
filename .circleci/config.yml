@@ -1,8 +1,14 @@
 version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: cimg/node:lts
+    working_directory: ~/plantify-app
+
 jobs:
   code-quality:
-    docker:
-      - image: circleci/node:lts
+    executor: default
 
     steps:
       - checkout
@@ -14,7 +20,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
 
       - save_cache:
           paths:
@@ -29,11 +35,13 @@ jobs:
 
   eas-preview-build:
     executor: default
+
     steps:
       - checkout
       - run:
           name: Install dependencies
           command: npm ci
+
       - run:
           name: Trigger build
           command: npx eas-cli build --platform all --non-interactive --no-wait
