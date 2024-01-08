@@ -70,7 +70,12 @@ workflows:
 
   build-app:
     jobs:
-      - code-quality
+      - code-quality:
+          filters:
+              branches:
+                only:
+                  - main
+
       - eas-preview-build:
           requires:
             - code-quality
