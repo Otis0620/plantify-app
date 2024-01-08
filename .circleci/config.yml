@@ -86,7 +86,7 @@ jobs:
 
 workflows:
   version: 2
-  code-quality:
+  feature-branch-workflow:
     jobs:
       - code-quality:
           filters:
@@ -94,7 +94,18 @@ workflows:
               only:
                 - /^PLAN-.*$/
 
-  build-app:
+      - approval:
+          type: approval
+
+      - eas-development-build:
+          requires:
+            - approval
+          filters:
+            branches:
+              only:
+                - /^PLAN-.*$/
+
+  main-branch-workflow:
     jobs:
       - code-quality:
           filters:
@@ -102,20 +113,6 @@ workflows:
                 only:
                   - main
 
-      - approval:
-          type: approval
-          requires:
-            - code-quality
-
-      - eas-development-build:
-          requires:
-            - code-quality
-            - approval
-          filters:
-            branches:
-              only:
-                - /^PLAN-.*$/
-                
       - eas-preview-build:
           requires:
             - code-quality
