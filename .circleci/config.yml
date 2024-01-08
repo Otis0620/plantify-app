@@ -76,10 +76,16 @@ workflows:
               branches:
                 only:
                   - main
+      - approval:
+          type: approval
+          filters:
+            branches:
+              only:
+                - main
 
       - eas-preview-build:
           requires:
-            - code-quality
+            - approval
           filters:
             branches:
               only:
