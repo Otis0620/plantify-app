@@ -102,19 +102,27 @@ workflows:
                 only:
                   - main
 
+      - hold:
+          type: approval
+          requires:
+            - code-quality
+          filters:
+            branches:
+              only:
+                - /^PLAN-.*$/   
+
+      - eas-development-build:
+          requires:
+            - hold
+          filters:
+            branches:
+              only:
+                - /^PLAN-.*$/
+                
       - eas-preview-build:
           requires:
             - code-quality
           filters:
             branches:
               only:
-                - main
-
-      - eas-development-build:
-          requires:
-            - code-quality
-          filters:
-            branches:
-              only:
-                - /^PLAN-.*$/          
-          hold: true
+                - main  
