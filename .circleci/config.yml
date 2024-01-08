@@ -104,6 +104,8 @@ workflows:
 
       - approval:
           type: approval
+          requires:
+            - code-quality
 
       - eas-development-build:
           requires:
