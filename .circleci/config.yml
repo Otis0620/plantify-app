@@ -62,8 +62,19 @@ workflows:
   version: 2
   code-quality:
     jobs:
-      - code-quality
+      - code-quality:
+          filters:
+            branches:
+              only:
+                - /^PLAN-.*$/
 
   build-app:
     jobs:
-      - eas-preview-build
+      - code-quality
+      - eas-preview-build:
+          requires:
+            - code-quality
+          filters:
+            branches:
+              only:
+                - main
