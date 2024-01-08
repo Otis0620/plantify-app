@@ -102,12 +102,13 @@ workflows:
                 only:
                   - main
 
-      - hold:
+      - approval:
           type: approval
 
       - eas-development-build:
           requires:
-            - hold
+            - code-quality
+            - approval
           filters:
             branches:
               only:
