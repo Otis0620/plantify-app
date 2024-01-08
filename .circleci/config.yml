@@ -58,31 +58,31 @@ jobs:
           name: Trigger build
           command: npx eas-cli build --profile preview --platform all --non-interactive --no-wait
           
-    eas-development-build:
-      executor: default
+  eas-development-build:
+    executor: default
 
-      steps:
-        - checkout
+    steps:
+      - checkout
 
-        - restore_cache:
-            keys:
-              - v1-dependencies-{{ checksum "package-lock.json" }}
-              - v1-dependencies-
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
 
-        - run:
-            name: Install dependencies
-            command: npm ci
+      - run:
+          name: Install dependencies
+          command: npm ci
 
-        - save_cache:
-            paths:
-              - node_modules
-            key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-        - run:
-            name: Trigger build
-            command: |
-              npx eas-cli build --profile development --platform android --non-interactive --no-wait
-              npx eas-cli build --profile development-simulator --platform ios --non-interactive --no-wait
+      - run:
+          name: Trigger build
+          command: |
+            npx eas-cli build --profile development --platform android --non-interactive --no-wait
+            npx eas-cli build --profile development-simulator --platform ios --non-interactive --no-wait
 
 workflows:
   version: 2
@@ -116,4 +116,5 @@ workflows:
           filters:
             branches:
               only:
-                - /^PLAN-.*$/
+                - /^PLAN-.*$/          
+          hold: true
