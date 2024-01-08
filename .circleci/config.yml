@@ -106,10 +106,6 @@ workflows:
           type: approval
           requires:
             - code-quality
-          filters:
-            branches:
-              only:
-                - /^PLAN-.*$/   
 
       - eas-development-build:
           requires:
