@@ -96,6 +96,10 @@ workflows:
 
       - approval:
           type: approval
+          filters:
+            branches:
+              only:
+                - /^PLAN-.*$/
 
       - eas-development-build:
           requires:
