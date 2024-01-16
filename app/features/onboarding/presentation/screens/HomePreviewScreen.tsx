@@ -1,6 +1,6 @@
 import { Image, StyleSheet, View } from 'react-native';
 import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
-import DeviceSizeApi from '@core/lib/api/DeviceSizeApi';
+import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 
 import BezierCurveOverlay from '../components/BezierCurveOverlay';
 

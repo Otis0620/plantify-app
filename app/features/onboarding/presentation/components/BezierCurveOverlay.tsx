@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import Svg from '@core/lib/components/react-native-svg/Svg';
 import Path from '@core/lib/components/react-native-svg/Path';
-import DeviceSizeApi from '@core/lib/api/DeviceSizeApi';
+import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 
 const deviceSizeApi = DeviceSizeApi.getInstance();
 
