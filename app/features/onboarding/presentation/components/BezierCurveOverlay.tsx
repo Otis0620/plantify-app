@@ -1,7 +1,9 @@
 import { StyleSheet } from 'react-native';
 import Svg from '@core/lib/components/react-native-svg/Svg';
 import Path from '@core/lib/components/react-native-svg/Path';
-import { verticalScale } from 'react-native-size-matters';
+import DeviceSizeApi from '@core/lib/api/DeviceSizeApi';
+
+const deviceSizeApi = DeviceSizeApi.getInstance();
 
 const BezierCurveOverlay = () => {
   return (
@@ -13,10 +15,10 @@ const BezierCurveOverlay = () => {
     <Svg
       style={{
         ...styles.container,
-        // height,
       }}
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
+      testID="bezier-curve-overlay-svg"
     >
       {/* 
     This code defines an SVG path element with a series of commands to control its shape and movement.
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    height: verticalScale(295),
+    height: deviceSizeApi.verticalScale(295),
     bottom: 0,
     zIndex: 1,
     position: 'absolute',

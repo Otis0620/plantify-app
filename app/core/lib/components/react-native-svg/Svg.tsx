@@ -9,6 +9,7 @@ interface Props {
   style?: object | object[];
   preserveAspectRatio?: string;
   children?: React.ReactNode;
+  testID?: string;
 }
 
 const Svg = (props: Props) => {

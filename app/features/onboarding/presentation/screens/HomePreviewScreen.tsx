@@ -1,12 +1,17 @@
 import { Image, StyleSheet, View } from 'react-native';
 import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
-import { scale } from 'react-native-size-matters';
+import DeviceSizeApi from '@core/lib/api/DeviceSizeApi';
 
 import BezierCurveOverlay from '../components/BezierCurveOverlay';
 
+const deviceSizeApi = DeviceSizeApi.getInstance();
+
 const HomePreviewScreen = () => {
   return (
-    <View style={styles.container}>
+    <View
+      style={styles.container}
+      testID="home-preview-screen-container"
+    >
       <View>
         <Image
           style={styles.image}
@@ -28,8 +33,8 @@ const styles = StyleSheet.create({
   image: {
     marginTop: '5%',
     alignSelf: 'center',
-    width: scale(300),
-    height: scale(570),
+    width: deviceSizeApi.scale(300),
+    height: deviceSizeApi.scale(570),
   },
 });
 
