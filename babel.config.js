@@ -10,6 +10,7 @@ module.exports = function (api) {
           root: ['./'],
           alias: {
             '@assets': './assets',
+            '@core': './app/core',
           },
         },
       ],
