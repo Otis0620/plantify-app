@@ -3,7 +3,7 @@ import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 import Colors from '@core/constants/colors';
 
-import BezierCurveOverlay from '../components/BezierCurveOverlay';
+import BezierCurveOverlay from '../components/BezierCurveOverlay/BezierCurveOverlay';
 
 const deviceSizeApi = DeviceSizeApi.getInstance();
 
