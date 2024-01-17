@@ -1,6 +1,7 @@
 import { Image, StyleSheet, View } from 'react-native';
 import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
+import Colors from '@core/constants/colors';
 
 import BezierCurveOverlay from '../components/BezierCurveOverlay';
 
@@ -27,7 +28,7 @@ const HomePreviewScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00a86b',
+    backgroundColor: Colors.primary900,
   },
 
   image: {

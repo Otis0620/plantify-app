@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import Svg from '@core/lib/components/react-native-svg/Svg';
 import Path from '@core/lib/components/react-native-svg/Path';
 import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
+import Colors from '@core/constants/colors';
 
 const deviceSizeApi = DeviceSizeApi.getInstance();
 
@@ -13,9 +14,7 @@ const BezierCurveOverlay = () => {
         and has a width and height of 100 units each.
     */
     <Svg
-      style={{
-        ...styles.container,
-      }}
+      style={styles.container}
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
       testID="bezier-curve-overlay-svg"
@@ -25,7 +24,10 @@ const BezierCurveOverlay = () => {
     The commands used are 'M' to move to a point, 'L' to draw a straight line, and 'Q' to draw a quadratic Bézier curve.
     The path starts at (0, 100), moves to (100, 200), then to (100, 0), and finally draws a quadratic Bézier curve to (0, 0) with a control point at (50, 26). 
     */}
-      <Path d="M0,100 L100,200 L100,0 Q50, 26 0, 0" fill="#ffffff" />
+      <Path
+        d="M0,100 L100,200 L100,0 Q50, 26 0, 0"
+        fill={Colors.white}
+      />
     </Svg>
   );
 };
