@@ -1,11 +1,9 @@
-import { Image, StyleSheet, View } from 'react-native';
-import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
-import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
+import { StyleSheet, View } from 'react-native';
 import Colors from '@core/constants/colors';
+import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 
 import BezierCurveOverlay from '../components/BezierCurveOverlay/BezierCurveOverlay';
-
-const deviceSizeApi = DeviceSizeApi.getInstance();
+import PreviewImage from '../components/PreviewImage/PreviewImage';
 
 const HomePreviewScreen = () => {
   return (
@@ -13,13 +11,8 @@ const HomePreviewScreen = () => {
       style={styles.container}
       testID="home-preview-screen-container"
     >
-      <View>
-        <Image
-          style={styles.image}
-          resizeMode="contain"
-          source={HomeScreenPreviewImage}
-        />
-      </View>
+      <PreviewImage imageSource={HomeScreenPreviewImage} />
+
       <BezierCurveOverlay />
     </View>
   );
@@ -29,13 +22,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.primary900,
-  },
-
-  image: {
-    marginTop: '5%',
-    alignSelf: 'center',
-    width: deviceSizeApi.scale(300),
-    height: deviceSizeApi.scale(570),
   },
 });
 

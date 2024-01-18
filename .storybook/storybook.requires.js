@@ -50,6 +50,7 @@ try {
 const getStories = () => {
   return {
     "./app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx": require("../app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx"),
+    "./app/features/onboarding/presentation/components/PreviewImage/PreviewImage.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewImage/PreviewImage.stories.tsx"),
   };
 };
 
