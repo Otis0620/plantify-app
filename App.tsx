@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, View } from 'react-native';
 import Constants from 'expo-constants';
 
 import Storybook from './.storybook';
-import HomePreviewScreen from './app/features/onboarding/presentation/screens/HomePreviewScreen';
+import HomePreviewScreen from './app/features/onboarding/presentation/screens/HomePreviewScreen/HomePreviewScreen';
 
 function App() {
   return (

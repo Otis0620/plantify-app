@@ -3,10 +3,10 @@ import { render } from '@testing-library/react-native';
 import BezierCurveOverlay from './BezierCurveOverlay';
 
 describe('BezierCurveOverlay', () => {
-  it('renders correctly', () => {
+  it('should render correctly', () => {
     const { getByTestId } = render(<BezierCurveOverlay />);
-    const svgElement = getByTestId('bezier-curve-overlay-svg');
+    const bezierCurverOverlay = getByTestId('bezier-curve-overlay');
 
-    expect(svgElement).toBeTruthy();
+    expect(bezierCurverOverlay).toBeTruthy();
   });
 });

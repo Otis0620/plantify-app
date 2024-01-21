@@ -3,10 +3,10 @@ import { render } from '@testing-library/react-native';
 import HomePreviewScreen from './HomePreviewScreen';
 
 describe('HomePreviewScreen', () => {
-  it('renders correctly', () => {
+  it('should render correctly', () => {
     const { getByTestId } = render(<HomePreviewScreen />);
-    const container = getByTestId('home-preview-screen-container');
+    const homePreviewScreen = getByTestId('home-preview-screen');
 
-    expect(container).toBeTruthy();
+    expect(homePreviewScreen).toBeTruthy();
   });
 });

@@ -5,12 +5,12 @@ import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 import PreviewImage from './PreviewImage';
 
 describe('PreviewImage', () => {
-  it('renders properly', () => {
+  it('should render correctly', () => {
     const { getByTestId } = render(
       <PreviewImage imageSource={HomeScreenPreviewImage} />,
     );
-    const imageComponent = getByTestId('preview-image');
+    const previewImage = getByTestId('preview-image');
 
-    expect(imageComponent).toBeTruthy();
+    expect(previewImage).toBeTruthy();
   });
 });
