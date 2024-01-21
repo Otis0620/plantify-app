@@ -1,24 +1,18 @@
-import React from 'react';
-import {
-  ComponentMeta,
-  ComponentStory,
-} from '@storybook/react-native';
+import { Meta, StoryObj } from '@storybook/react-native';
 
 import PreviewDescription from './PreviewDescription';
 
-const PreviewDescriptionMeta: ComponentMeta<
-  typeof PreviewDescription
-> = {
+const meta: Meta<typeof PreviewDescription> = {
   title: 'PreviewDescription',
   component: PreviewDescription,
 };
 
-export default PreviewDescriptionMeta;
+export default meta;
 
-type PreviewDescriptionStory = ComponentStory<
-  typeof PreviewDescription
->;
+type Story = StoryObj<typeof PreviewDescription>;
 
-export const Basic: PreviewDescriptionStory = () => (
-  <PreviewDescription description="Preview description" />
-);
+export const Primary: Story = {
+  args: {
+    description: 'Preview Description Text',
+  },
+};

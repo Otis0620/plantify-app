@@ -1,13 +1,9 @@
-import React from 'react';
-import {
-  ComponentMeta,
-  ComponentStory,
-} from '@storybook/react-native';
+import { Meta, StoryObj } from '@storybook/react-native';
 import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 
 import PreviewImage from './PreviewImage';
 
-const PreviewImageMeta: ComponentMeta<typeof PreviewImage> = {
+const meta: Meta<typeof PreviewImage> = {
   title: 'PreviewImage',
   component: PreviewImage,
   parameters: {
@@ -16,10 +12,12 @@ const PreviewImageMeta: ComponentMeta<typeof PreviewImage> = {
   },
 };
 
-export default PreviewImageMeta;
+export default meta;
 
-type PreviewImageStory = ComponentStory<typeof PreviewImage>;
+type Story = StoryObj<typeof PreviewImage>;
 
-export const Basic: PreviewImageStory = () => (
-  <PreviewImage imageSource={HomeScreenPreviewImage} />
-);
+export const Primary: Story = {
+  args: {
+    imageSource: HomeScreenPreviewImage,
+  },
+};

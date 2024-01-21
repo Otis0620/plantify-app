@@ -1,20 +1,18 @@
-import React from 'react';
-import {
-  ComponentMeta,
-  ComponentStory,
-} from '@storybook/react-native';
+import { Meta, StoryObj } from '@storybook/react-native';
 
 import PreviewHeading from './PreviewHeading';
 
-const PreviewHeadingMeta: ComponentMeta<typeof PreviewHeading> = {
+const meta: Meta<typeof PreviewHeading> = {
   title: 'PreviewHeading',
   component: PreviewHeading,
 };
 
-export default PreviewHeadingMeta;
+export default meta;
 
-type PreviewHeadingStory = ComponentStory<typeof PreviewHeading>;
+type Story = StoryObj<typeof PreviewHeading>;
 
-export const Basic: PreviewHeadingStory = () => (
-  <PreviewHeading heading="Preview heading" />
-);
+export const Primary: Story = {
+  args: {
+    heading: 'Preview Heading Text',
+  },
+};

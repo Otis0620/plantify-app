@@ -1,15 +1,9 @@
-import React from 'react';
-import {
-  ComponentMeta,
-  ComponentStory,
-} from '@storybook/react-native';
+import { Meta, StoryObj } from '@storybook/react-native';
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 
 import BezierCurveOverlay from './BezierCurveOverlay';
 
-const BezierCurveOverlayMeta: ComponentMeta<
-  typeof BezierCurveOverlay
-> = {
+const meta: Meta<typeof BezierCurveOverlay> = {
   title: 'BezierCurveOverlay',
   component: BezierCurveOverlay,
   decorators: [withBackgrounds],
@@ -23,12 +17,8 @@ const BezierCurveOverlayMeta: ComponentMeta<
   },
 };
 
-export default BezierCurveOverlayMeta;
+export default meta;
 
-type BezierCurveOverlayStory = ComponentStory<
-  typeof BezierCurveOverlay
->;
+type Story = StoryObj<typeof BezierCurveOverlay>;
 
-export const Basic: BezierCurveOverlayStory = () => (
-  <BezierCurveOverlay />
-);
+export const Primary: Story = {};
