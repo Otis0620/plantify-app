@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 
-const deviceSizeApi = DeviceSizeApi.getInstance();
 interface Props {
   description: string;
 }
@@ -16,14 +14,13 @@ const PreviewDescription = ({ description }: Props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingVertical: deviceSizeApi.verticalScale(8),
-    paddingHorizontal: deviceSizeApi.scale(24),
+    paddingVertical: '2%',
+    paddingHorizontal: '1%',
   },
 
   description: {
     alignSelf: 'stretch',
     fontSize: 18,
-    letterSpacing: 0,
     lineHeight: 29,
     fontFamily: 'Urbanist-Regular',
     color: '#616161',

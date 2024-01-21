@@ -1,12 +1,10 @@
 import {
   Image,
   ImageSourcePropType,
+  Platform,
   StyleSheet,
   View,
 } from 'react-native';
-import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
-
-const deviceSizeApi = DeviceSizeApi.getInstance();
 
 interface Props {
   imageSource: ImageSourcePropType;
@@ -14,9 +12,12 @@ interface Props {
 
 const PreviewImage = ({ imageSource }: Props) => {
   return (
-    <View testID="preview-image">
+    <View style={styles.container} testID="preview-image">
       <Image
-        style={styles.image}
+        style={{
+          ...styles.image,
+          marginTop: Platform.OS === 'ios' ? 0 : '5%',
+        }}
         resizeMode="contain"
         source={imageSource}
       />
@@ -27,10 +28,11 @@ const PreviewImage = ({ imageSource }: Props) => {
 export default PreviewImage;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+  },
   image: {
-    marginTop: '5%',
     alignSelf: 'center',
-    width: deviceSizeApi.scale(300),
-    height: deviceSizeApi.scale(570),
+    width: '85%',
   },
 });

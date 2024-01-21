@@ -16,26 +16,26 @@ const HomePreviewScreen = () => {
     <View style={styles.container} testID="home-preview-screen">
       <PreviewImage imageSource={HomeScreenPreviewImage} />
 
-      <BezierCurveOverlay />
+      <BezierCurveOverlay>
+        <PreviewHeading heading="Identify the Green World Around You" />
 
-      <PreviewHeading heading="Identify the Green World Around You" />
-
-      <PreviewDescription
-        description=" Turn your smartphone into a plant expert. Scan any plant using
+        <PreviewDescription
+          description=" Turn your smartphone into a plant expert. Scan any plant using
         your camera and let Plantify identify it for you."
-      />
+        />
 
-      <Ellipsis activeEllipsis={1} />
+        <Ellipsis activeEllipsis={1} />
 
-      <View style={styles.buttonContainer}>
-        <Pressable style={styles.buttonSkip}>
-          <Text style={styles.buttonSkipText}>Skip</Text>
-        </Pressable>
+        <View style={styles.buttonContainer}>
+          <Pressable style={styles.buttonSkip}>
+            <Text style={styles.buttonSkipText}>Skip</Text>
+          </Pressable>
 
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Continue</Text>
-        </Pressable>
-      </View>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Continue</Text>
+          </Pressable>
+        </View>
+      </BezierCurveOverlay>
     </View>
   );
 };
@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 1000,
     overflow: 'hidden',
-    paddingHorizontal: 70,
-    paddingVertical: 10,
+    paddingHorizontal: deviceSizeApi.scale(70),
+    paddingVertical: deviceSizeApi.scale(10),
   },
 
   buttonSkipText: {

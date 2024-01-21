@@ -1,7 +1,4 @@
-import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 import { StyleSheet, Text, View } from 'react-native';
-
-const deviceSizeApi = DeviceSizeApi.getInstance();
 
 interface Props {
   heading: string;
@@ -18,7 +15,6 @@ const PreviewHeading = ({ heading }: Props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    marginTop: deviceSizeApi.moderateScale(-190),
   },
 
   heading: {
