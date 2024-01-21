@@ -13,7 +13,7 @@ const Ellipsis = ({ activeEllipsis }: Props) => {
   const numberOfEllipsis = [1, 2, 3];
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="ellipsis">
       {numberOfEllipsis.map((index) => (
         <EllipsisItem key={index} active={index === activeEllipsis} />
       ))}

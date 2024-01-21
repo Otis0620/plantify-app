@@ -50,6 +50,9 @@ try {
 const getStories = () => {
   return {
     "./app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx": require("../app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx"),
+    "./app/features/onboarding/presentation/components/Ellipsis/Ellipsis.stories.tsx": require("../app/features/onboarding/presentation/components/Ellipsis/Ellipsis.stories.tsx"),
+    "./app/features/onboarding/presentation/components/PreviewDescription/PreviewDescription.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewDescription/PreviewDescription.stories.tsx"),
+    "./app/features/onboarding/presentation/components/PreviewHeading/PreviewHeading.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewHeading/PreviewHeading.stories.tsx"),
     "./app/features/onboarding/presentation/components/PreviewImage/PreviewImage.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewImage/PreviewImage.stories.tsx"),
   };
 };
