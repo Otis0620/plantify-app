@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react-native';
 import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
 

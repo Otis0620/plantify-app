@@ -1,10 +1,10 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { render } from '@testing-library/react-native';
 
 import Ellipsis from './Ellipsis';
 
 describe('Ellipsis', () => {
-  let ellipsis: React.ReactElement;
+  let ellipsis: ReactElement;
 
   beforeEach(() => {
     const { getByTestId } = render(<Ellipsis activeEllipsis={1} />);
