@@ -14,7 +14,7 @@ const PreviewDescription = ({ description }: Props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingVertical: '2%',
+    paddingVertical: '3%',
     paddingHorizontal: '1%',
   },
 

@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import Svg from '@core/lib/components/react-native-svg/Svg';
 import Path from '@core/lib/components/react-native-svg/Path';
-import Colors from '@core/enums/Colors';
+import Color from '@core/enums/Color';
 
 interface Props {
   children: React.ReactNode;
@@ -28,7 +28,7 @@ const BezierCurveOverlay = ({ children }: Props) => {
         */}
         <Path
           d="M0,100 L100,200 L100,0 Q50, 20 0, 0"
-          fill={Colors.white}
+          fill={Color.white}
         />
 
         <View style={styles.childrenContainer}>{children}</View>

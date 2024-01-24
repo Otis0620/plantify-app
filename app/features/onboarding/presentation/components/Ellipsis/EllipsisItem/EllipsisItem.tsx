@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import Colors from '@core/enums/Colors';
+import Color from '@core/enums/Color';
 
 type Props = {
   active: boolean;
@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     marginHorizontal: '.75%',
-    backgroundColor: Colors.greyScale200,
+    backgroundColor: Color.greyScale200,
   },
 
   activeEllipsis: {
-    backgroundColor: Colors.primary900,
+    backgroundColor: Color.primary900,
     width: '7.5%',
   },
 });
