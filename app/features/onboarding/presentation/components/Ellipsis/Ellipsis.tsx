@@ -1,9 +1,6 @@
-import DeviceSizeApi from '@core/lib/api/device-size/DeviceSizeApi';
 import { StyleSheet, View } from 'react-native';
 
 import EllipsisItem from './EllipsisItem/EllipsisItem';
-
-const deviceSizeApi = DeviceSizeApi.getInstance();
 
 interface Props {
   activeEllipsis: number;
@@ -26,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     width: '100%',
-    paddingTop: deviceSizeApi.verticalScale(5),
+    paddingTop: '1.6%',
   },
 });
 
