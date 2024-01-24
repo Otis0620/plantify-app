@@ -10,6 +10,6 @@ describe('PreviewDescription', () => {
     );
     const previewDescription = getByTestId('preview-description');
 
-    expect(previewDescription).toBeDefined();
+    expect(previewDescription).toBeTruthy();
   });
 });

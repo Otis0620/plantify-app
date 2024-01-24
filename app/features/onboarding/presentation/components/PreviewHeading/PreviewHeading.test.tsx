@@ -10,6 +10,6 @@ describe('PreviewHeading', () => {
     );
     const previewHeading = getByTestId('preview-heading');
 
-    expect(previewHeading).toBeDefined();
+    expect(previewHeading).toBeTruthy();
   });
 });

@@ -3,7 +3,7 @@ import Color from '@core/enums/Color';
 
 const PreviewButtonGroup = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="preview-button-group">
       <Pressable
         style={{
           ...styles.button,
