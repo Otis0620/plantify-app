@@ -1,3 +1,5 @@
+import Color from '@core/enums/Color';
+import Font from '@core/enums/Font';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface Props {
@@ -22,8 +24,8 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     fontSize: 18,
     lineHeight: 29,
-    fontFamily: 'Urbanist-Regular',
-    color: '#616161',
+    fontFamily: Font.primary,
+    color: Color.greyScale700,
     textAlign: 'center',
   },
 });

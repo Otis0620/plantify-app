@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Color from '@core/enums/Color';
+import Font from '@core/enums/Font';
 
 const PreviewButtonGroup = () => {
   return (
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     lineHeight: 26,
     fontWeight: '700',
-    fontFamily: 'Urbanist-Bold',
+    fontFamily: Font.primaryBold,
     textAlign: 'center',
   },
 });
