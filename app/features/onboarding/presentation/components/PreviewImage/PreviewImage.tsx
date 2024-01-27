@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 2,
   },
+
   image: {
     alignSelf: 'center',
     width: '85%',
