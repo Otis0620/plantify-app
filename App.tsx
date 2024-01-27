@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import Constants from 'expo-constants';
 
-export default function App() {
+import Storybook from './.storybook';
+import HomePreviewScreen from './app/features/onboarding/presentation/screens/HomePreviewScreen/HomePreviewScreen';
+// import DiagnosePreviewScreen from './app/features/onboarding/presentation/screens/DiagnosePreviewScreen/DiagnosePreviewScreen';
+// import MyPlantsPreviewScreen from './app/features/onboarding/presentation/screens/MyPlantsPreviewScreen/MyPlantsPreviewScreen';
+
+export const TEST_ID = 'App';
+
+function App() {
   return (
-    <View style={styles.container} testID="container">
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container} testID={TEST_ID}>
+      <View style={styles.container}>
+        <HomePreviewScreen />
+        {/* <DiagnosePreviewScreen /> */}
+        {/* <MyPlantsPreviewScreen /> */}
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
+
+export default Constants.expoConfig?.extra?.storyBookEnabled
+  ? Storybook
+  : App;
