@@ -52,6 +52,7 @@ const getStories = () => {
     "./app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx": require("../app/features/onboarding/presentation/components/BezierCurveOverlay/BezierCurveOverlay.stories.tsx"),
     "./app/features/onboarding/presentation/components/Ellipsis/Ellipsis.stories.tsx": require("../app/features/onboarding/presentation/components/Ellipsis/Ellipsis.stories.tsx"),
     "./app/features/onboarding/presentation/components/Ellipsis/EllipsisItem/EllipsisItem.stories.tsx": require("../app/features/onboarding/presentation/components/Ellipsis/EllipsisItem/EllipsisItem.stories.tsx"),
+    "./app/features/onboarding/presentation/components/PreviewButton/PreviewButton.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewButton/PreviewButton.stories.tsx"),
     "./app/features/onboarding/presentation/components/PreviewButtonGroup/PreviewButtonGroup.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewButtonGroup/PreviewButtonGroup.stories.tsx"),
     "./app/features/onboarding/presentation/components/PreviewDescription/PreviewDescription.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewDescription/PreviewDescription.stories.tsx"),
     "./app/features/onboarding/presentation/components/PreviewHeading/PreviewHeading.stories.tsx": require("../app/features/onboarding/presentation/components/PreviewHeading/PreviewHeading.stories.tsx"),
