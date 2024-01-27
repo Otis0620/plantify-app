@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native';
 
-import PreviewHeading from './PreviewHeading';
+import PreviewHeading, { TEST_ID } from './PreviewHeading';
 
 describe('PreviewHeading', () => {
   it('should render correctly', () => {
@@ -8,7 +8,7 @@ describe('PreviewHeading', () => {
     const { getByTestId } = render(
       <PreviewHeading heading={heading} />,
     );
-    const previewHeading = getByTestId('preview-heading');
+    const previewHeading = getByTestId(TEST_ID);
 
     expect(previewHeading).toBeTruthy();
   });

@@ -4,9 +4,11 @@ interface Props {
   children: React.ReactNode;
 }
 
+export const TEST_ID = 'preview-button-container';
+
 const PreviewButtonContainer = ({ children }: Props) => {
   return (
-    <View style={styles.container} testID="preview-button-container">
+    <View style={styles.container} testID={TEST_ID}>
       {children}
     </View>
   );

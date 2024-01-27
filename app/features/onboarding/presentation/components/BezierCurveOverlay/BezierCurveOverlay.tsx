@@ -7,6 +7,8 @@ interface Props {
   children: React.ReactNode;
 }
 
+export const TEST_ID = 'bezier-curve-overlay';
+
 const BezierCurveOverlay = ({ children }: Props) => {
   return (
     <View style={styles.container}>
@@ -19,7 +21,7 @@ const BezierCurveOverlay = ({ children }: Props) => {
       <Svg
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        testID="bezier-curve-overlay"
+        testID={TEST_ID}
       >
         {/* 
           This code defines an SVG path element with a series of commands to control its shape and movement.

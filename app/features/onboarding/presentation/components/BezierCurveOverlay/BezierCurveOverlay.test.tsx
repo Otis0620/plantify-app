@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react-native';
 import { View } from 'react-native';
 
-import BezierCurveOverlay from './BezierCurveOverlay';
+import BezierCurveOverlay, { TEST_ID } from './BezierCurveOverlay';
 
 describe('BezierCurveOverlay', () => {
   it('should render correctly', () => {
@@ -9,7 +9,7 @@ describe('BezierCurveOverlay', () => {
     const { getByTestId } = render(
       <BezierCurveOverlay children={testChild} />,
     );
-    const bezierCurverOverlay = getByTestId('bezier-curve-overlay');
+    const bezierCurverOverlay = getByTestId(TEST_ID);
 
     expect(bezierCurverOverlay).toBeTruthy();
   });

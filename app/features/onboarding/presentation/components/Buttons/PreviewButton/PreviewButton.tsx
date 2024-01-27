@@ -8,6 +8,8 @@ interface Props {
   style: StyleProps;
 }
 
+export const TEST_ID = 'preview-button';
+
 const PreviewButton = ({ text, style }: Props) => {
   return (
     <Pressable
@@ -16,7 +18,7 @@ const PreviewButton = ({ text, style }: Props) => {
         backgroundColor: style.backgroundColor,
         width: style.width,
       }}
-      testID="preview-button"
+      testID={TEST_ID}
     >
       <Text style={{ ...styles.text, color: style.color }}>
         {text}

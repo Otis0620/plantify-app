@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react-native';
 import Color from '@core/utils/enums/Color';
 
-import PreviewButton from './PreviewButton';
+import PreviewButton, { TEST_ID } from './PreviewButton';
 import StyleProps from './utils/StyleProps';
 
 describe('PreviewButton', () => {
@@ -15,7 +15,7 @@ describe('PreviewButton', () => {
     const { getByTestId } = render(
       <PreviewButton text="test" style={testStyles} />,
     );
-    const previewButton = getByTestId('preview-button');
+    const previewButton = getByTestId(TEST_ID);
 
     expect(previewButton).toBeTruthy();
   });

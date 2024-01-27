@@ -10,9 +10,11 @@ import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButton from '../../components/Buttons/PreviewButton/PreviewButton';
 import PreviewButtonContainer from '../../components/Buttons/PreviewButtonContainer/PreviewButtonContainer';
 
+export const TEST_ID = 'my-plants-preview-screen';
+
 const MyPlantsPreviewScreen = () => {
   return (
-    <View style={styles.container} testID="my-plants-preview-screen">
+    <View style={styles.container} testID={TEST_ID}>
       <PreviewImage imageSource={MyPlantsScreenPreviewImage} />
 
       <BezierCurveOverlay>

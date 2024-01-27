@@ -6,11 +6,13 @@ interface Props {
   activeEllipsis: number;
 }
 
+export const TEST_ID = 'ellipsis';
+
 const Ellipsis = ({ activeEllipsis }: Props) => {
   const numberOfEllipsis = [1, 2, 3];
 
   return (
-    <View style={styles.container} testID="ellipsis">
+    <View style={styles.container} testID={TEST_ID}>
       {numberOfEllipsis.map((index) => (
         <EllipsisItem key={index} active={index === activeEllipsis} />
       ))}

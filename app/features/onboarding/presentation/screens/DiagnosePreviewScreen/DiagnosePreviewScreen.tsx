@@ -9,9 +9,11 @@ import PreviewDescription from '../../components/PreviewDescription/PreviewDescr
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButtonGroup from '../../components/Buttons/PreviewButtonGroup/PreviewButtonGroup';
 
+export const TEST_ID = 'diagnose-preview-screen';
+
 const DiagnosePreviewScreen = () => {
   return (
-    <View style={styles.container} testID="diagnose-preview-screen">
+    <View style={styles.container} testID={TEST_ID}>
       <PreviewImage imageSource={DiagnoseScreenPreviewImage} />
 
       <BezierCurveOverlay>

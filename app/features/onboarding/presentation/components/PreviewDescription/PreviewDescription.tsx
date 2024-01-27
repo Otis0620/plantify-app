@@ -5,9 +5,12 @@ import { StyleSheet, Text, View } from 'react-native';
 interface Props {
   description: string;
 }
+
+export const TEST_ID = 'preview-description';
+
 const PreviewDescription = ({ description }: Props) => {
   return (
-    <View style={styles.container} testID="preview-description">
+    <View style={styles.container} testID={TEST_ID}>
       <Text style={styles.description}>{description}</Text>
     </View>
   );

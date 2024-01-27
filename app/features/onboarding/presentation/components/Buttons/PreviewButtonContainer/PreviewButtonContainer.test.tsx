@@ -1,6 +1,8 @@
 import { render } from '@testing-library/react-native';
 
-import PreviewButtonContainer from './PreviewButtonContainer';
+import PreviewButtonContainer, {
+  TEST_ID,
+} from './PreviewButtonContainer';
 
 describe('PreviewButtonContainer', () => {
   it('should render correctly', () => {
@@ -9,9 +11,7 @@ describe('PreviewButtonContainer', () => {
         <></>
       </PreviewButtonContainer>,
     );
-    const previewButtonContainer = getByTestId(
-      'preview-button-container',
-    );
+    const previewButtonContainer = getByTestId(TEST_ID);
 
     expect(previewButtonContainer).toBeTruthy();
   });

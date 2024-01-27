@@ -6,13 +6,15 @@ import {
   View,
 } from 'react-native';
 
+export const TEST_ID = 'preview-image';
+
 interface Props {
   imageSource: ImageSourcePropType;
 }
 
 const PreviewImage = ({ imageSource }: Props) => {
   return (
-    <View style={styles.container} testID="preview-image">
+    <View style={styles.container} testID={TEST_ID}>
       <Image
         style={{
           ...styles.image,

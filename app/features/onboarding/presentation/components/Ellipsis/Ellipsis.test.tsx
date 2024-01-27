@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { render } from '@testing-library/react-native';
 
-import Ellipsis from './Ellipsis';
+import Ellipsis, { TEST_ID } from './Ellipsis';
 
 describe('Ellipsis', () => {
   let ellipsis: ReactElement;
@@ -9,7 +9,7 @@ describe('Ellipsis', () => {
   beforeEach(() => {
     const { getByTestId } = render(<Ellipsis activeEllipsis={1} />);
 
-    ellipsis = getByTestId('ellipsis');
+    ellipsis = getByTestId(TEST_ID);
   });
 
   it('should render correctly', () => {

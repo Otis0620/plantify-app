@@ -6,9 +6,11 @@ interface Props {
   heading: string;
 }
 
+export const TEST_ID = 'preview-heading';
+
 const PreviewHeading = ({ heading }: Props) => {
   return (
-    <View style={styles.container} testID="preview-heading">
+    <View style={styles.container} testID={TEST_ID}>
       <Text style={styles.heading}>{heading}</Text>
     </View>
   );
