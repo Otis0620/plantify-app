@@ -1,5 +1,5 @@
-import Color from '@core/enums/Color';
-import Font from '@core/enums/Font';
+import Color from '@core/utils/enums/Color';
+import Font from '@core/utils/enums/Font';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface Props {

@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import Color from '@core/enums/Color';
-import Font from '@core/enums/Font';
+import Color from '@core/utils/enums/Color';
+import Font from '@core/utils/enums/Font';
 
 const PreviewButtonGroup = () => {
   return (

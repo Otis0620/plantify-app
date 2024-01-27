@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import Color from '@core/enums/Color';
+import Color from '@core/utils/enums/Color';
 
 type Props = {
   active: boolean;

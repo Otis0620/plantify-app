@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import Color from '@core/utils/enums/Color';
-import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
+import DiagnoseScreenPreviewImage from '@assets/onboarding/diagnose-screen-preview.png';
 
 import BezierCurveOverlay from '../../components/BezierCurveOverlay/BezierCurveOverlay';
 import PreviewImage from '../../components/PreviewImage/PreviewImage';
@@ -9,20 +9,17 @@ import PreviewDescription from '../../components/PreviewDescription/PreviewDescr
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButtonGroup from '../../components/PreviewButtonGroup/PreviewButtonGroup';
 
-const HomePreviewScreen = () => {
+const DiagnosePreviewScreen = () => {
   return (
-    <View style={styles.container} testID="home-preview-screen">
-      <PreviewImage imageSource={HomeScreenPreviewImage} />
+    <View style={styles.container} testID="diagnose-preview-screen">
+      <PreviewImage imageSource={DiagnoseScreenPreviewImage} />
 
       <BezierCurveOverlay>
-        <PreviewHeading heading="Identify the Green World Around You" />
+        <PreviewHeading heading="Your All-in-One Plant Care Companion" />
 
-        <PreviewDescription
-          description="Turn your smartphone into a plant expert. Scan any plant using
-        your camera and let Plantify identify it for you."
-        />
+        <PreviewDescription description="Plantify helps you care for your plants. Set reminders, document their growth, and diagnose diseases with a quick camera scan." />
 
-        <Ellipsis activeEllipsis={1} />
+        <Ellipsis activeEllipsis={2} />
 
         <PreviewButtonGroup />
       </BezierCurveOverlay>
@@ -37,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePreviewScreen;
+export default DiagnosePreviewScreen;

@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import Svg from '@core/lib/components/react-native-svg/Svg';
 import Path from '@core/lib/components/react-native-svg/Path';
-import Color from '@core/enums/Color';
+import Color from '@core/utils/enums/Color';
 
 interface Props {
   children: React.ReactNode;
