@@ -7,7 +7,8 @@ import PreviewImage from '../../components/PreviewImage/PreviewImage';
 import PreviewHeading from '../../components/PreviewHeading/PreviewHeading';
 import PreviewDescription from '../../components/PreviewDescription/PreviewDescription';
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
-import PreviewButtonGroup from '../../components/PreviewButtonGroup/PreviewButtonGroup';
+import PreviewButton from '../../components/Buttons/PreviewButton/PreviewButton';
+import PreviewButtonContainer from '../../components/Buttons/PreviewButtonContainer/PreviewButtonContainer';
 
 const MyPlantsPreviewScreen = () => {
   return (
@@ -21,7 +22,16 @@ const MyPlantsPreviewScreen = () => {
 
         <Ellipsis activeEllipsis={3} />
 
-        <PreviewButtonGroup />
+        <PreviewButtonContainer>
+          <PreviewButton
+            text="Get Started"
+            style={{
+              color: Color.white,
+              backgroundColor: Color.primary900,
+              width: '90%',
+            }}
+          />
+        </PreviewButtonContainer>
       </BezierCurveOverlay>
     </View>
   );

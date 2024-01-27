@@ -1,8 +1,8 @@
-import { StyleSheet, View } from 'react-native';
 import Color from '@core/utils/enums/Color';
 
 import PreviewButton from '../PreviewButton/PreviewButton';
 import StyleProps from '../PreviewButton/utils/StyleProps';
+import PreviewButtonContainer from '../PreviewButtonContainer/PreviewButtonContainer';
 
 const buttonWidth = '45%';
 
@@ -20,20 +20,12 @@ const continueButtonStyle: StyleProps = {
 
 const PreviewButtonGroup = () => {
   return (
-    <View style={styles.container} testID="preview-button-group">
+    <PreviewButtonContainer>
       <PreviewButton text="skip" style={skipButtonStyle} />
 
       <PreviewButton text="Continue" style={continueButtonStyle} />
-    </View>
+    </PreviewButtonContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingVertical: '7%',
-  },
-});
 
 export default PreviewButtonGroup;

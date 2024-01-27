@@ -7,7 +7,7 @@ import PreviewImage from '../../components/PreviewImage/PreviewImage';
 import PreviewHeading from '../../components/PreviewHeading/PreviewHeading';
 import PreviewDescription from '../../components/PreviewDescription/PreviewDescription';
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
-import PreviewButtonGroup from '../../components/PreviewButtonGroup/PreviewButtonGroup';
+import PreviewButtonGroup from '../../components/Buttons/PreviewButtonGroup/PreviewButtonGroup';
 
 const HomePreviewScreen = () => {
   return (
