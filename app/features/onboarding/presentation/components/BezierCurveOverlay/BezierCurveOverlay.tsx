@@ -26,7 +26,7 @@ const BezierCurveOverlay = ({ children }: Props) => {
         {/* 
           This code defines an SVG path element with a series of commands to control its shape and movement.
           The commands used are 'M' to move to a point, 'L' to draw a straight line, and 'Q' to draw a quadratic Bézier curve.
-          The path starts at (0, 100), moves to (100, 200), then to (100, 0), and finally draws a quadratic Bézier curve to (0, 0) with a control point at (50, 26). 
+          The path starts at (0, 100), moves to (100, 200), then to (100, 0), and finally draws a quadratic Bézier curve to (0, 0) with a control point at (50, 20). 
         */}
         <Path
           d="M0,100 L100,200 L100,0 Q50, 20 0, 0"

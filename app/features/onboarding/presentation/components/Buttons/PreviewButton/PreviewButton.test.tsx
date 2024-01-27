@@ -11,7 +11,6 @@ describe('PreviewButton', () => {
       backgroundColor: Color.primary900,
       width: '100%',
     };
-
     const { getByTestId } = render(
       <PreviewButton text="test" style={testStyles} />,
     );

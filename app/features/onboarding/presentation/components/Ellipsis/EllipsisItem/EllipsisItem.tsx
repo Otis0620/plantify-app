@@ -5,11 +5,13 @@ type Props = {
   active: boolean;
 };
 
+export const TEST_ID = 'ellipsis-item';
+
 const EllipsisItem = ({ active }: Props) => {
   return (
     <View
       style={[styles.ellipsis, active ? styles.activeEllipsis : {}]}
-      testID="ellipsis-item"
+      testID={TEST_ID}
     />
   );
 };
