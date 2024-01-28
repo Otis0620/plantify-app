@@ -1,5 +1,6 @@
-import Color from '@core/utils/enums/Color';
 import { DimensionValue } from 'react-native';
+
+import Color from '~core/utils/enums/Color';
 
 interface StyleProps {
   color?: Color;

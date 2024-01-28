@@ -1,8 +1,21 @@
 import { render } from '@testing-library/react-native';
-import Color from '@core/utils/enums/Color';
+
+import Color from '~core/utils/enums/Color';
 
 import PreviewButton, { TEST_ID } from './PreviewButton';
 import StyleProps from './utils/StyleProps';
+
+jest.mock('@react-navigation/native', () => {
+  const actualNav = jest.requireActual('@react-navigation/native');
+
+  return {
+    ...actualNav,
+    useNavigation: () => ({
+      navigate: jest.fn(),
+      dispatch: jest.fn(),
+    }),
+  };
+});
 
 describe('PreviewButton', () => {
   it('should render correctly', () => {

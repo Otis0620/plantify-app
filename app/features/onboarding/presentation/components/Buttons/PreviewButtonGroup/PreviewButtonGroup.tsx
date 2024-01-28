@@ -1,8 +1,12 @@
-import Color from '@core/utils/enums/Color';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
+import Color from '~core/utils/enums/Color';
 
 import PreviewButton from '../PreviewButton/PreviewButton';
 import StyleProps from '../PreviewButton/utils/StyleProps';
 import PreviewButtonContainer from '../PreviewButtonContainer/PreviewButtonContainer';
+import { ParamList } from '../../../navigation/OnboardingStackNavigator';
 
 const buttonWidth = '45%';
 
@@ -18,12 +22,23 @@ const continueButtonStyle: StyleProps = {
   width: buttonWidth,
 };
 
-const PreviewButtonGroup = () => {
+interface Props {
+  navigateTo: keyof ParamList;
+}
+
+const PreviewButtonGroup = ({ navigateTo }: Props) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<ParamList>>();
+
   return (
     <PreviewButtonContainer>
       <PreviewButton text="skip" style={skipButtonStyle} />
 
-      <PreviewButton text="Continue" style={continueButtonStyle} />
+      <PreviewButton
+        text="Continue"
+        style={continueButtonStyle}
+        onPress={() => navigation.navigate(navigateTo)}
+      />
     </PreviewButtonContainer>
   );
 };

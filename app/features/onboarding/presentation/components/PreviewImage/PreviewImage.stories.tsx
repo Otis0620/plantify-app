@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-native';
-import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
-import DiagnoseScreenPreviewImage from '@assets/onboarding/diagnose-screen-preview.png';
-import MyPlantsScreenPreviewImage from '@assets/onboarding/my-plants-screen-preview.png';
+
+import HomeScreenPreviewImage from '~assets/onboarding/home-screen-preview.png';
+import DiagnoseScreenPreviewImage from '~assets/onboarding/diagnose-screen-preview.png';
+import MyPlantsScreenPreviewImage from '~assets/onboarding/my-plants-screen-preview.png';
 
 import PreviewImage from './PreviewImage';
 

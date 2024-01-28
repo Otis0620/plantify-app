@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react-native';
-import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
+
+import HomeScreenPreviewImage from '~assets/onboarding/home-screen-preview.png';
 
 import PreviewImage, { TEST_ID } from './PreviewImage';
 

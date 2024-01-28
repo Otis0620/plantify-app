@@ -1,7 +1,8 @@
 import { StyleSheet, View } from 'react-native';
-import Svg from '@core/lib/components/react-native-svg/Svg';
-import Path from '@core/lib/components/react-native-svg/Path';
-import Color from '@core/utils/enums/Color';
+
+import Svg from '~core/lib/components/react-native-svg/Svg';
+import Path from '~core/lib/components/react-native-svg/Path';
+import Color from '~core/utils/enums/Color';
 
 interface Props {
   children: React.ReactNode;
@@ -32,9 +33,9 @@ const BezierCurveOverlay = ({ children }: Props) => {
           d="M0,100 L100,200 L100,0 Q50, 20 0, 0"
           fill={Color.white}
         />
-
-        <View style={styles.childrenContainer}>{children}</View>
       </Svg>
+
+      <View style={styles.childrenContainer}>{children}</View>
     </View>
   );
 };
@@ -46,7 +47,9 @@ const styles = StyleSheet.create({
   },
 
   childrenContainer: {
-    marginTop: '15%',
+    top: '15%',
+    width: '100%',
+    position: 'absolute',
   },
 });
 
