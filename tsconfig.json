@@ -6,7 +6,8 @@
     "paths": {
       "~assets/*": ["./assets/*"],
       "~core/*": ["./app/core/*"],
-      "~features/*": ["./app/features/*"]
+      "~features/*": ["./app/features/*"],
+      "~storybook/*": ["./.storybook/*"]
     },
   },
 }
