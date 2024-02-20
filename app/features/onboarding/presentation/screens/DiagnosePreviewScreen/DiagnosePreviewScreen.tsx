@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import Color from '@core/utils/enums/Color';
-import DiagnoseScreenPreviewImage from '@assets/onboarding/diagnose-screen-preview.png';
+
+import DiagnoseScreenPreviewImage from '~assets/onboarding/diagnose-screen-preview.png';
+import Color from '~core/utils/enums/Color';
 
 import BezierCurveOverlay from '../../components/BezierCurveOverlay/BezierCurveOverlay';
 import PreviewImage from '../../components/PreviewImage/PreviewImage';
@@ -8,6 +9,7 @@ import PreviewHeading from '../../components/PreviewHeading/PreviewHeading';
 import PreviewDescription from '../../components/PreviewDescription/PreviewDescription';
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButtonGroup from '../../components/Buttons/PreviewButtonGroup/PreviewButtonGroup';
+import { Screen } from '../../navigation/utils/enums/Screen';
 
 export const TEST_ID = 'diagnose-preview-screen';
 
@@ -23,7 +25,7 @@ const DiagnosePreviewScreen = () => {
 
         <Ellipsis activeEllipsis={2} />
 
-        <PreviewButtonGroup />
+        <PreviewButtonGroup navigateTo={Screen.MyPlantsPreview} />
       </BezierCurveOverlay>
     </View>
   );

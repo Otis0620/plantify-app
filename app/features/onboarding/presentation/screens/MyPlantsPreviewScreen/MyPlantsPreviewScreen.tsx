@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import Color from '@core/utils/enums/Color';
-import MyPlantsScreenPreviewImage from '@assets/onboarding/my-plants-screen-preview.png';
+
+import MyPlantsScreenPreviewImage from '~assets/onboarding/my-plants-screen-preview.png';
+import Color from '~core/utils/enums/Color';
 
 import BezierCurveOverlay from '../../components/BezierCurveOverlay/BezierCurveOverlay';
 import PreviewImage from '../../components/PreviewImage/PreviewImage';

@@ -1,16 +1,18 @@
 import { Pressable, StyleSheet, Text } from 'react-native';
-import Font from '@core/utils/enums/Font';
+
+import Font from '~core/utils/enums/Font';
 
 import StyleProps from './utils/StyleProps';
 
 interface Props {
   text: string;
   style: StyleProps;
+  onPress?: () => void;
 }
 
 export const TEST_ID = 'preview-button';
 
-const PreviewButton = ({ text, style }: Props) => {
+const PreviewButton = ({ text, style, onPress }: Props) => {
   return (
     <Pressable
       style={{
@@ -19,6 +21,7 @@ const PreviewButton = ({ text, style }: Props) => {
         width: style.width,
       }}
       testID={TEST_ID}
+      onPress={onPress}
     >
       <Text style={{ ...styles.text, color: style.color }}>
         {text}

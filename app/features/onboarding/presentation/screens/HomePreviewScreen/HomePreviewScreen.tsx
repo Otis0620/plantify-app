@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import Color from '@core/utils/enums/Color';
-import HomeScreenPreviewImage from '@assets/onboarding/home-screen-preview.png';
+
+import HomeScreenPreviewImage from '~assets/onboarding/home-screen-preview.png';
+import Color from '~core/utils/enums/Color';
 
 import BezierCurveOverlay from '../../components/BezierCurveOverlay/BezierCurveOverlay';
 import PreviewImage from '../../components/PreviewImage/PreviewImage';
@@ -8,6 +9,7 @@ import PreviewHeading from '../../components/PreviewHeading/PreviewHeading';
 import PreviewDescription from '../../components/PreviewDescription/PreviewDescription';
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButtonGroup from '../../components/Buttons/PreviewButtonGroup/PreviewButtonGroup';
+import { Screen } from '../../navigation/utils/enums/Screen';
 
 export const TEST_ID = 'home-preview-screen';
 
@@ -26,7 +28,7 @@ const HomePreviewScreen = () => {
 
         <Ellipsis activeEllipsis={1} />
 
-        <PreviewButtonGroup />
+        <PreviewButtonGroup navigateTo={Screen.DiagnosePreview} />
       </BezierCurveOverlay>
     </View>
   );

@@ -3,18 +3,21 @@ import { StyleSheet, View } from 'react-native';
 import EllipsisItem from './EllipsisItem/EllipsisItem';
 
 interface Props {
-  activeEllipsis: number;
+  activeEllipsis: 1 | 2 | 3;
 }
 
 export const TEST_ID = 'ellipsis';
 
 const Ellipsis = ({ activeEllipsis }: Props) => {
-  const numberOfEllipsis = [1, 2, 3];
+  const numberOfEllipsis = 3;
 
   return (
     <View style={styles.container} testID={TEST_ID}>
-      {numberOfEllipsis.map((index) => (
-        <EllipsisItem key={index} active={index === activeEllipsis} />
+      {[...Array(numberOfEllipsis).keys()].map((index) => (
+        <EllipsisItem
+          key={index}
+          active={index + 1 === activeEllipsis}
+        />
       ))}
     </View>
   );

@@ -4,8 +4,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["./assets/*"],
-      "@core/*": ["./app/core/*"]
+      "~assets/*": ["./assets/*"],
+      "~core/*": ["./app/core/*"],
+      "~features/*": ["./app/features/*"],
+      "~storybook/*": ["./.storybook/*"]
     },
   },
 }
