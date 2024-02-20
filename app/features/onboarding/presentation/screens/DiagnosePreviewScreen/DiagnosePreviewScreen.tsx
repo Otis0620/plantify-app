@@ -9,7 +9,7 @@ import PreviewHeading from '../../components/PreviewHeading/PreviewHeading';
 import PreviewDescription from '../../components/PreviewDescription/PreviewDescription';
 import Ellipsis from '../../components/Ellipsis/Ellipsis';
 import PreviewButtonGroup from '../../components/Buttons/PreviewButtonGroup/PreviewButtonGroup';
-import { Screens } from '../../navigation/OnboardingStackNavigator';
+import { Screen } from '../../navigation/utils/enums/Screen';
 
 export const TEST_ID = 'diagnose-preview-screen';
 
@@ -25,7 +25,7 @@ const DiagnosePreviewScreen = () => {
 
         <Ellipsis activeEllipsis={2} />
 
-        <PreviewButtonGroup navigateTo={Screens.MyPlantsPreview} />
+        <PreviewButtonGroup navigateTo={Screen.MyPlantsPreview} />
       </BezierCurveOverlay>
     </View>
   );

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react-native';
 
-import { Screens } from '~features/onboarding/presentation/navigation/OnboardingStackNavigator';
+import { Screen } from '~features/onboarding/presentation/navigation/utils/enums/Screen';
 
 import PreviewButtonGroup from './PreviewButtonGroup';
 import { TEST_ID } from '../PreviewButtonContainer/PreviewButtonContainer';
@@ -20,7 +20,7 @@ jest.mock('@react-navigation/native', () => {
 describe('PreviewButtonGroup', () => {
   it('should render with the correct amount of children', () => {
     const { getByTestId } = render(
-      <PreviewButtonGroup navigateTo={Screens.HomePreview} />,
+      <PreviewButtonGroup navigateTo={Screen.HomePreview} />,
     );
     const previewButtonGroup = getByTestId(TEST_ID);
     const previewButtonGroupChildren =

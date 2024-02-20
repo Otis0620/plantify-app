@@ -3,38 +3,33 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomePreviewScreen from '../screens/HomePreviewScreen/HomePreviewScreen';
 import DiagnosePreviewScreen from '../screens/DiagnosePreviewScreen/DiagnosePreviewScreen';
 import MyPlantsPreviewScreen from '../screens/MyPlantsPreviewScreen/MyPlantsPreviewScreen';
-
-export enum Screens {
-  HomePreview = 'HomePreview',
-  DiagnosePreview = 'DiagnosePreview',
-  MyPlantsPreview = 'MyPlantsPreview',
-}
+import { Screen } from './utils/enums/Screen';
 
 export type ParamList = {
-  [Screens.HomePreview]: undefined;
-  [Screens.DiagnosePreview]: undefined;
-  [Screens.MyPlantsPreview]: undefined;
+  [Screen.HomePreview]: undefined;
+  [Screen.DiagnosePreview]: undefined;
+  [Screen.MyPlantsPreview]: undefined;
 };
 
 const Stack = createNativeStackNavigator<ParamList>();
 
 const OnboardingStackNavigator = () => (
   <Stack.Navigator
-    initialRouteName={Screens.HomePreview}
+    initialRouteName={Screen.HomePreview}
     screenOptions={{
       headerShown: false,
     }}
   >
     <Stack.Screen
-      name={Screens.HomePreview}
+      name={Screen.HomePreview}
       component={HomePreviewScreen}
     />
     <Stack.Screen
-      name={Screens.DiagnosePreview}
+      name={Screen.DiagnosePreview}
       component={DiagnosePreviewScreen}
     />
     <Stack.Screen
-      name={Screens.MyPlantsPreview}
+      name={Screen.MyPlantsPreview}
       component={MyPlantsPreviewScreen}
     />
   </Stack.Navigator>
